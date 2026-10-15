@@ -45,10 +45,18 @@ function ContactSection() {
     event.preventDefault()
     setLoading(true)
 
+    const { serviceId, templateId, publicKey } = emailConfig
+
+    if (!serviceId || !templateId || !publicKey) {
+      setLoading(false)
+      alert("Email service is not configured.")
+      return
+    }
+
     emailjs
       .send(
-        emailConfig.serviceId,
-        emailConfig.templateId,
+        serviceId,
+        templateId,
         {
           from_name: form.name,
           to_name: emailConfig.toName,
@@ -56,7 +64,7 @@ function ContactSection() {
           to_email: emailConfig.toEmail,
           message: form.message,
         },
-        emailConfig.publicKey,
+        publicKey,
       )
       .then(() => {
         setLoading(false)
