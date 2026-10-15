@@ -1,3 +1,4 @@
+import { cacheLife, cacheTag } from "next/cache"
 import { About } from "@/components/about/about"
 import { StarsField } from "@/components/canvas/stars-field"
 import { Contact } from "@/components/contact/contact"
@@ -10,6 +11,10 @@ import { Works } from "@/components/works/works"
 import { getPortfolioContent } from "@/lib/portfolio"
 
 export default async function HomePage() {
+  "use cache"
+  cacheLife("max")
+  cacheTag("portfolio-page")
+
   const content = await getPortfolioContent()
 
   return (
