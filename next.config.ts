@@ -4,8 +4,6 @@ const nextConfig: NextConfig = {
   experimental: {
     agentFeedback: true,
   },
-  cacheComponents: true,
-  partialPrefetching: true,
   transpilePackages: ["three", "maath"],
   images: {
     dangerouslyAllowSVG: true,
