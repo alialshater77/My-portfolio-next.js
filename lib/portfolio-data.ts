@@ -145,6 +145,22 @@ export const portfolioContent: PortfolioContent = {
   ],
   projects: [
     {
+      name: "(Comming Soon) General Authority of Civil Aviation (Syria)",
+      description:
+        "The General Authority of Civil Aviation is Syria's official civil aviation body. I designed and built the bilingual public portal and a custom Strapi 5 control panel end to end: the interface, the content model, the publishing workflow, and the security layer, handled the SEO and the deployment, Optimized the performance. The public site is Next.js 16 and React 19 in TypeScript, with content stored in PostgreSQL. Editors compose pages from ordered sections. Locales drive routing, the language switcher, hreflang, and the sitemap, and a page cannot go live until every enabled locale is complete. Scheduled publishing covers multi-entry, multi-locale releases, with draft preview and a Redis lock so the same batch is never published or sent twice. The portal serves CMS forms with file upload and request tracking, newsletter campaigns, Excel flight schedules, a Leaflet map of Syrian airports, statistics charts, and site search. Sign-in uses TOTP two-factor authentication, an AES-256-GCM encrypted login log, upload and threat checks, a nonce-based content security policy, CSRF protection, and reCAPTCHA v3, a threat scanner and upload firewall (SQL injection, XSS, path traversal, malicious files), Super Admin IP block and unblock tools, an immutable audit trail.",
+      tags: [
+        { name: "Next.js", color: "silver-text-gradient" },
+        { name: "TypeScript", color: "blue-text-gradient" },
+        { name: "Strapi", color: "violet-text-gradient" },
+        { name: "PostgreSQL", color: "royal-text-gradient" },
+        { name: "Redis", color: "pink-text-gradient" },
+        { name: "GSAP", color: "lime-text-gradient" },
+        { name: "Tailwind", color: "teal-text-gradient" },
+      ],
+      image: "/images/gaca.png",
+      demo: "https://gaca.gov.sy/",
+    },
+    {
       name: "Halo Phones",
       description:
         "Halo Phones is a server-rendered shop (Template Engine EJS) for a short list of handsets. Customers search and filter the catalog, keep a cart, pay by card, and receive an order confirmation with a branded PDF invoice. An admin manages listings, photos, and stock. I built it with Node.js, Express, and EJS, and store users, products, and sessions in MongoDB with Mongoose. Passwords are hashed with bcrypt. Sessions use express-session and connect-mongodb-session, sent as httpOnly, sameSite cookies. Helmet, csrf-sync, and rate limits protect login, signup, and password reset, and express-validator checks every write. Multer accepts product images and Sharp resizes them. Nodemailer sends the confirmation and the password-reset email, PDFKit builds the invoice, and Redis caches the catalog and product pages until a listing or its stock changes. The service runs on Render with MongoDB Atlas.",
