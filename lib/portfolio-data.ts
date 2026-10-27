@@ -145,6 +145,40 @@ export const portfolioContent: PortfolioContent = {
   ],
   projects: [
     {
+      name: "Halo Phones",
+      description:
+        "Halo Phones is a server-rendered shop (Template Engine EJS) for a short list of handsets. Customers search and filter the catalog, keep a cart, pay by card, and receive an order confirmation with a branded PDF invoice. An admin manages listings, photos, and stock. I built it with Node.js, Express, and EJS, and store users, products, and sessions in MongoDB with Mongoose. Passwords are hashed with bcrypt. Sessions use express-session and connect-mongodb-session, sent as httpOnly, sameSite cookies. Helmet, csrf-sync, and rate limits protect login, signup, and password reset, and express-validator checks every write. Multer accepts product images and Sharp resizes them. Nodemailer sends the confirmation and the password-reset email, PDFKit builds the invoice, and Redis caches the catalog and product pages until a listing or its stock changes. The service runs on Render with MongoDB Atlas.",
+      tags: [
+        { name: "Node.js", color: "green-text-gradient" },
+        { name: "Express", color: "stone-text-gradient" },
+        { name: "EJS", color: "amber-text-gradient" },
+        { name: "MongoDB", color: "emerald-text-gradient" },
+        { name: "Redis", color: "pink-text-gradient" },
+        { name: "Stripe", color: "indigo-text-gradient" },
+      ],
+      image: "/images/halo-phones.png",
+      source_code_link:
+        "https://github.com/alialshater77/Halo-Phones-Node.js-Project",
+      demo: "https://halo-phones-node-js-project.onrender.com/",
+    },
+    {
+      name: "Vellum",
+      description:
+        "Vellum is a private editorial journal. Members publish short pictured dispatches, and anyone with the desk open sees a new note, a revision, or a removal as it happens, without refreshing the page. I built the full product: a Next.js 16 and React 19 site in TypeScript and Tailwind CSS, deployed on Cloudflare Workers with OpenNext and Wrangler, and a Node.js API on Express 5 with Mongoose and MongoDB Atlas. Authentication uses JSON Web Tokens and bcrypt, with the session kept in an httpOnly cookie. express-validator and express-rate-limit check every write, Multer accepts only PNG or JPEG images up to 1 MB, and Socket.IO delivers live events to signed-in members. The API runs on Render.",
+      tags: [
+        { name: "Next.js", color: "silver-text-gradient" },
+        { name: "TypeScript", color: "blue-text-gradient" },
+        { name: "Node.js", color: "green-text-gradient" },
+        { name: "Express", color: "stone-text-gradient" },
+        { name: "MongoDB", color: "emerald-text-gradient" },
+        { name: "Socket.IO", color: "pink-text-gradient" },
+        { name: "Tailwind", color: "teal-text-gradient" },
+      ],
+      image: "/images/vellum.png",
+      source_code_link: "https://github.com/alialshater77/Vellum-journal-Server",
+      demo: "https://vellum-journal.alialshater7.workers.dev/",
+    },
+    {
       name: "Obsidian Global Investment",
       description:
         "Obsidian Global Investment is a diversified holding and operating group across energy, commodity trading, technology, property management, and corporate services. I delivered the public website and a Strapi-backed content dashboard as a full CMS, so editors can publish pages, sections, and media without engineering changes.",
