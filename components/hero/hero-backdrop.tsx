@@ -3,7 +3,7 @@ import Image from "next/image"
 export function HeroBackdrop() {
   return (
     <Image
-      src="/images/herobg.png"
+      src="/images/herobg.webp"
       alt=""
       fill
       priority

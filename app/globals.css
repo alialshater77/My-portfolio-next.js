@@ -10,7 +10,7 @@
   --shadow-card: 0px 35px 120px -15px #211e35;
   --breakpoint-xs: 300px;
   --font-sans: var(--font-poppins), sans-serif;
-  --background-image-hero-pattern: url("/images/herobg.png");
+  --background-image-hero-pattern: url("/images/herobg.webp");
 }
 
 @layer base {
