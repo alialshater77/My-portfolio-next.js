@@ -325,41 +325,41 @@ export const portfolioContent: PortfolioContent = {
         image: "/images/jood.webp",
       demo: "https://jood.alialshater7.workers.dev/",
     },
-    {
-      name: "Abana",
-      description:
-        "Abana provides business solutions, digital transformation, and custom technology services for government and enterprise clients in Saudi Arabia. I built the multilingual website in Next.js 14 with server-side rendering and Tailwind CSS.",
-      tags: [
-        { name: "Next.js", color: "silver-text-gradient" },
-        { name: "Tailwind", color: "teal-text-gradient" },
-      ],
-      image: "/images/abana.webp",
-      demo: "https://www.abana.com.sa/",
-    },
-    {
-      name: "Prokoders company website",
-      description:
-        "I built the Prokoders company website from scratch as a multilingual Next.js 15 application, combining server rendering and static generation for performance. The interface includes light and dark themes, built with Tailwind CSS and shadcn/ui.",
-      tags: [
-        { name: "Next.js", color: "silver-text-gradient" },
-        { name: "shadcn", color: "slate-text-gradient" },
-        { name: "Tailwind", color: "teal-text-gradient" },
-      ],
-      image: "/images/prokoders.webp",
-      demo: "https://prokoders.com/en",
-    },
-    {
-      name: "BOLD Bespoke Design",
-      description:
-        "BOLD Bespoke Design is a Dubai manufacturer of luxury furniture shaped to each client's taste. I built the interactive front end in JavaScript and Tailwind CSS and integrated it with Laravel Blade templates.",
-      tags: [
-        { name: "JavaScript", color: "yellow-text-gradient" },
-        { name: "Laravel", color: "orange-text-gradient" },
-        { name: "Tailwind", color: "teal-text-gradient" },
-      ],
-      image: "/images/bold.webp",
-      demo: "https://bolduae.com/en",
-    },
+    // {
+    //   name: "Abana",
+    //   description:
+    //     "Abana provides business solutions, digital transformation, and custom technology services for government and enterprise clients in Saudi Arabia. I built the multilingual website in Next.js 14 with server-side rendering and Tailwind CSS.",
+    //   tags: [
+    //     { name: "Next.js", color: "silver-text-gradient" },
+    //     { name: "Tailwind", color: "teal-text-gradient" },
+    //   ],
+    //   image: "/images/abana.webp",
+    //   demo: "https://www.abana.com.sa/",
+    // },
+    // {
+    //   name: "Prokoders company website",
+    //   description:
+    //     "I built the Prokoders company website from scratch as a multilingual Next.js 15 application, combining server rendering and static generation for performance. The interface includes light and dark themes, built with Tailwind CSS and shadcn/ui.",
+    //   tags: [
+    //     { name: "Next.js", color: "silver-text-gradient" },
+    //     { name: "shadcn", color: "slate-text-gradient" },
+    //     { name: "Tailwind", color: "teal-text-gradient" },
+    //   ],
+    //   image: "/images/prokoders.webp",
+    //   demo: "https://prokoders.com/en",
+    // },
+    // {
+    //   name: "BOLD Bespoke Design",
+    //   description:
+    //     "BOLD Bespoke Design is a Dubai manufacturer of luxury furniture shaped to each client's taste. I built the interactive front end in JavaScript and Tailwind CSS and integrated it with Laravel Blade templates.",
+    //   tags: [
+    //     { name: "JavaScript", color: "yellow-text-gradient" },
+    //     { name: "Laravel", color: "orange-text-gradient" },
+    //     { name: "Tailwind", color: "teal-text-gradient" },
+    //   ],
+    //   image: "/images/bold.webp",
+    //   demo: "https://bolduae.com/en",
+    // },
     {
       name: "Cryptoverse",
       description:

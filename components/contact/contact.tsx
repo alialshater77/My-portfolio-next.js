@@ -38,11 +38,34 @@ function ContactSection() {
     event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = event.currentTarget
+    event.currentTarget.setCustomValidity("")
     setForm((current) => ({ ...current, [name]: value }))
   }
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
+
+    const formElement = event.currentTarget
+    const values = {
+      name: form.name.trim(),
+      email: form.email.trim(),
+      message: form.message.trim(),
+    }
+
+    for (const fieldName of ["name", "email", "message"] as const) {
+      const field = formElement.elements.namedItem(fieldName)
+      if (
+        field instanceof HTMLInputElement ||
+        field instanceof HTMLTextAreaElement
+      ) {
+        field.setCustomValidity(
+          values[fieldName] ? "" : "Please fill out this field.",
+        )
+      }
+    }
+
+    if (!formElement.reportValidity()) return
+
     setLoading(true)
 
     const { serviceId, templateId, publicKey } = emailConfig
@@ -58,11 +81,11 @@ function ContactSection() {
         serviceId,
         templateId,
         {
-          from_name: form.name,
+          from_name: values.name,
           to_name: emailConfig.toName,
-          from_email: form.email,
+          from_email: values.email,
           to_email: emailConfig.toEmail,
-          message: form.message,
+          message: values.message,
         },
         publicKey,
       )
@@ -113,6 +136,7 @@ function ContactSection() {
                 value={form.name}
                 onChange={handleChange}
                 placeholder="Enter your name"
+                required
                 className="bg-tertiary placeholder:text-secondary rounded-lg border-none px-6 py-4 font-medium text-white"
               />
             </label>
@@ -125,6 +149,7 @@ function ContactSection() {
                 value={form.email}
                 onChange={handleChange}
                 placeholder="Enter your email"
+                required
                 className="bg-tertiary placeholder:text-secondary rounded-lg border-none px-6 py-4 font-medium text-white"
               />
             </label>
@@ -136,6 +161,7 @@ function ContactSection() {
                 value={form.message}
                 onChange={handleChange}
                 placeholder="Enter your message"
+                required
                 className="bg-tertiary placeholder:text-secondary rounded-lg border-none px-6 py-4 font-medium text-white"
               />
             </label>
